@@ -1,4 +1,4 @@
-## dfa for language containing substring '111'
+## dfa for language endig in 101
 class dfa:
     def __init__(self, transitions, symbols, final):
         self.symbols = symbols
@@ -18,11 +18,10 @@ class dfa:
             print("Accepted")
         else:
             print("Invalid")
-
-tr111 = {0: {'0': 0, '1': 1},
-         1: {'0': 0, '1': 2},
-         2: {'0': 0, '1': 3},
-         3: {'0': 3, '1': 3}}
-threeone = dfa(tr111, ('0', '1'), (3,))
+tr = {0: {'0': 0, '1': 1},
+      1: {'0': 2, '1': 1},
+      2: {'0': 0, '1': 3},
+      3: {'0': 2, '1': 1}}
+d = dfa(tr, ('0', '1'), (3,))
 inp = input("Enter the string: ")
-threeone.check(inp)
+d.check(inp)
