@@ -1,0 +1,1 @@
+design a program for creating machine that accepts the strings always ending with 101.
